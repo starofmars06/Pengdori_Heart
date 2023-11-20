@@ -6,22 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/hyunsun_ahn/Scenes/Img_Tracking.unity
+    path: Assets/Scenes/Img_Tracking.unity
     guid: d0b8528b181e80a4d9ef05916650409e
   - enabled: 0
     path: Assets/hyunsun_ahn/Scenes/HeartScene.unity
     guid: ae14d89cd6dbf934b942f879c2953eb0
   - enabled: 1
-    path: Assets/hyunsun_ahn/Scenes/HeartAnim.unity
+    path: Assets/Scenes/HeartAnim.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/hyunsun_ahn/Scenes/Heart_Detail.unity
+    path: Assets/Scenes/Heart_Detail.unity
     guid: 9ec9aa8d1eafe89439edd665917dc4f4
   - enabled: 0
-    path: Assets/hyunsun_ahn/Scenes/temp_Detail.unity
+    path: Assets/Scenes/temp_Detail.unity
     guid: fdf84104da6088b429b21a9d5225d29f
   - enabled: 1
-    path: Assets/hyunsun_ahn/Scenes/Detail1.unity
+    path: Assets/Scenes/Detail1.unity
     guid: 4b7827cf523662844b1fa1fd83033069
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f7230c0e684a19f44a991d303f786deb, type: 2}
