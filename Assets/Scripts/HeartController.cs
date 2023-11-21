@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HeartController : MonoBehaviour
 {
@@ -11,10 +12,10 @@ public class HeartController : MonoBehaviour
     private float initialScale;
     public float scaleSpeed = 0.03f;
 
-
-    // Update is called once per frame
     void Update()
     {
+        //기존 코드는 x축 위주로만 회전이 가능하도록 작성되어 있음.
+        /*
         if (Input.touchCount == 1)
         {
             Touch touch = Input.GetTouch(0);
@@ -22,26 +23,45 @@ public class HeartController : MonoBehaviour
             switch (touch.phase)
             {
                 case TouchPhase.Began:
-                    // 터치가 시작된 위치 저장
                     touchStartPos = touch.position;
                     initialRotation = heart.transform.rotation;
                     break;
 
                 case TouchPhase.Moved:
-                    // 터치 이동 시 모델 회전
-
                     float deltaX = touch.position.x - touchStartPos.x;
-
-                    // 초기 회전값에 누적된 회전값을 더하여 현재의 회전값을 계산
                     Quaternion newRotation = initialRotation * Quaternion.Euler(0f, -deltaX * rotSpeed, 0f);
+                    heart.transform.rotation = newRotation;
+                    touchStartPos = touch.position;
+                    break;
+            }
+        }
+        */
 
-                    // 모델에 새로운 회전값 적용
+
+        if (Input.touchCount == 1)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    touchStartPos = touch.position;
+                    initialRotation = heart.transform.rotation;
+                    break;
+
+                case TouchPhase.Moved:
+                    float deltaX = touch.position.x - touchStartPos.x;
+                    float deltaY = touch.position.y - touchStartPos.y;
+
+                    // 왼쪽으로 스와이프하면 오른쪽으로, 오른쪽으로 스와이프하면 왼쪽으로 회전하도록 수정
+                    Quaternion newRotation = initialRotation * Quaternion.Euler(-deltaY * rotSpeed, -deltaX * rotSpeed, 0f);
                     heart.transform.rotation = newRotation;
 
                     touchStartPos = touch.position;
                     break;
             }
         }
+
         else if (Input.touchCount == 2)
         {
             Touch touch1 = Input.GetTouch(0);
@@ -58,7 +78,6 @@ public class HeartController : MonoBehaviour
 
             float deltaMagnitudeDiff = touchDeltaMag - prevTouchDeltaMag;
 
-            // deltaMagnitudeDiff 값이 양수면 거리가 증가, 음수면 거리가 감소
             if (deltaMagnitudeDiff > 0)
             {
                 heart.transform.localScale += heart.transform.localScale * scaleSpeed;
@@ -67,7 +86,8 @@ public class HeartController : MonoBehaviour
             {
                 heart.transform.localScale -= heart.transform.localScale * scaleSpeed;
             }
-
         }
+
+
     }
 }

@@ -7,6 +7,6 @@ public class Back : MonoBehaviour
 {
     public void OnSelect()
     {
-        SceneManager.LoadScene("Heart_Detail"); // 호출
+        SceneManager.LoadScene("Heart_Detail1"); // 호출
     }
 }

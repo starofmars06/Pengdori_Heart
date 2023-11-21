@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title_Scene.unity
+    guid: 427cb0d1f864d1d4a8eef114128a4a69
+  - enabled: 1
     path: Assets/Scenes/Img_Tracking.unity
     guid: d0b8528b181e80a4d9ef05916650409e
   - enabled: 0
@@ -15,15 +18,36 @@ EditorBuildSettings:
     path: Assets/Scenes/HeartAnim.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Heart_Detail.unity
+    path: Assets/Scenes/Heart_Detail1.unity
     guid: 9ec9aa8d1eafe89439edd665917dc4f4
   - enabled: 0
     path: Assets/Scenes/temp_Detail.unity
     guid: fdf84104da6088b429b21a9d5225d29f
   - enabled: 1
     path: Assets/Scenes/Detail1.unity
-    guid: 4b7827cf523662844b1fa1fd83033069
+    guid: 779911b1af0ebfb409f7b6a5b6ee45f1
+  - enabled: 1
+    path: Assets/Scenes/Detail2.unity
+    guid: a916fe58a6ae2c347997bf20b5310eaf
+  - enabled: 1
+    path: Assets/Scenes/Detail3.unity
+    guid: 5145d7e821a5f544cbd992e273a0203a
+  - enabled: 1
+    path: Assets/Scenes/Detail4.unity
+    guid: 5cc351549e8027743b652654dd365958
+  - enabled: 1
+    path: Assets/Scenes/Detail5.unity
+    guid: 5885dc3182e914a45b6bfdce3f76bc02
+  - enabled: 1
+    path: Assets/Scenes/Detail6.unity
+    guid: 41725947047dfc04e85ccafbe41b0169
+  - enabled: 1
+    path: Assets/Scenes/Detail7.unity
+    guid: 418879968b5f58a4fba1ff7a1aedbe5f
+  - enabled: 1
+    path: Assets/Scenes/Detail8.unity
+    guid: 25e068746f7536246b468b2c8acd4c91
   m_configObjects:
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f7230c0e684a19f44a991d303f786deb, type: 2}
-    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 80f120587c1870944807caad49214121, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 0660fcdbeddd64241a2b65e97e66b75c, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 14dcb7aa2030a5945973dd02bbf9f58e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f82679b1814cac54e9d9ead15989215b, type: 2}
