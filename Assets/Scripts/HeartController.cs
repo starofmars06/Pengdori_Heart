@@ -9,7 +9,7 @@ public class HeartController : MonoBehaviour
     public GameObject heart;
     private float rotSpeed = 0.7f;
     private float initialScale;
-    public float scaleSpeed = 0.0001f;
+    public float scaleSpeed = 0.03f;
 
 
     // Update is called once per frame
